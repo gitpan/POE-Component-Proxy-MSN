@@ -3,8 +3,7 @@ package POE::Component::Proxy::MSN;
 # vim:set ts=4
 
 use strict;
-use vars qw($VERSION);
-$VERSION = 0.01;
+our $VERSION = '0.02';
 
 use vars qw(%users);
 
@@ -529,7 +528,7 @@ __END__
 
 =head1 NAME
 
-POE::Component::Proxy::MSN - POE Component that is an MSN Messenger server
+POE::Component::Proxy::MSN - POE Component that is an MSN Messenger proxy
 
 =head1 SYNOPSIS
 
@@ -577,20 +576,27 @@ service and allows you to send your own notifications (toasts).
 
 =head1 SETUP
 
-Windows:
+=head2 Windows
+
 (Backup your registry beforehand, I'm not responible for your actions)
+
 Edit the registry, the key is HKEY_CURRENT_USER\Software\Microsoft\MSNMessenger\Server
+
 change the value using the ip of the server, like this:
+
 192.168.0.4;192.168.0.4:1863
 
-Linux:
+=head2 Linux
+
 (Various clients)
+
 Find where messenger.hotmail.com is specified, and change it to the ip of the server
 
 =head1 TODO
 
 msn_server and msn_port WILL go away in a future release, it will be automatic
-connection timeouts
+
+connection timeouts need to be implemented
 
 There might are some bugs, please report them.
 
@@ -606,6 +612,13 @@ it under the same terms as Perl itself.   Use at your own risk.
 See the examples directory for more ways to use this module.
 
 L<POE>
+
+=head1 COPYRIGHT AND LICENSE
+
+Copyright 2003-2004 by David Davis and Teknikill Software
+
+This library is free software; you can redistribute it and/or modify
+it under the same terms as Perl itself.
 
 =cut
 

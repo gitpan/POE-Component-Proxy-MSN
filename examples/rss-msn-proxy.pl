@@ -21,7 +21,7 @@ my %config = (
 	pidfile => '/var/run/msn-proxy.pid',
 	msn_server => '207.46.106.79',
 	msn_port => 1863,
-#	debug => 1,
+	debug => 1,
 #	daemon => 1,
 );
 
@@ -35,6 +35,26 @@ my @feeds = (
 		url => "http://slashdot.org/index.rss",
 		name => "slashdot",
 		delay => (60*60), # 1 hour, be nice to /.
+	},
+	{
+		url => "http://www.wired.com/news_drop/netcenter/netcenter.rdf",
+		name => "netcenter",
+		delay => 560,
+	},
+	{
+		url => "http://boingboing.net/rss.xml",
+		name => "boingboing",
+		delay => 620,
+	},
+	{
+		url => "http://www.theregister.co.uk/tonys/slashdot.rdf",
+		name => "theregister",
+		delay => 590,
+	},
+	{
+		url => "http://p.moreover.com/cgi-local/page?index_bookreviews+rss",
+		name => "moreover",
+		delay => 580,
 	},
 );
 
@@ -157,6 +177,7 @@ print "Starting up proxy\n" if $config{debug};
 if ($config{daemon}) {
 	print "Daemonizing...\n" if $config{debug};
 	POSIX::setsid();
+	no strict 'refs';
 	foreach my $f (qw( STDIN STDOUT STDERR )) {
 		open $f, '/dev/null';
 	}

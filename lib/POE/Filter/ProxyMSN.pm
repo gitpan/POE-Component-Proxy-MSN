@@ -16,7 +16,7 @@ sub new {
 		get_state => 'line',
 		put_state => 'line',
 		body_info => {},
-		get_color => '37',
+		get_color => '36',
 		put_color => '37',
 		log => 'proto.log',
     };

@@ -1,4 +1,7 @@
 Revision history for Perl extension POE::Component::Proxy::MSN
 
-0.01  Thu Aug 5 02:13:38 2004
+0.01 Thu Oct 28 18:15:00 2004
+	- fixed lame pod mistakes
+
+0.01 Thu Aug  5 02:13:38 2004
 	- original version
