@@ -1,0 +1,8 @@
+Changes
+MANIFEST
+Makefile.PL
+lib/POE/Component/Proxy/MSN.pm
+lib/POE/Component/Proxy/MSN/Command.pm
+lib/POE/Filter/ProxyMSN.pm
+examples/rss-msn-proxy.pl
+t/00_compile.t
